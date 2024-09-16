@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "940514279865",
+    "project_id": "blooddoman",
+    "storage_bucket": "blooddoman.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:940514279865:android:ad3128928e7e2d48c63668",
+        "android_client_info": {
+          "package_name": "com.blooddoman.blooddoman_clean"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDftmJ7Oya-h751T4pmbkgR7zf51g7VrOc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
