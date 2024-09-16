@@ -1,5 +1,3 @@
-import 'package:blooddoman_clean/RegisterCubit/cubit.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 import '../components/components.dart';
@@ -183,55 +181,55 @@ class _RegisterScreenState extends State<RegisterScreen> {
                           color: Colors.deepPurple),
                       child: MaterialButton(
                         onPressed: () async {
-                          if (nameController.text.isNotEmpty &&
-                              phoneController.text.isNotEmpty) {
-                            if (phoneController.text.length != 11) {
-                              showToast(
-                                  text: 'رقم الهاتف غير صحيح',
-                                  state: ToastStates.warning);
-                            } else {
-                              showToast(
-                                  text: 'برجاء الانتظار قليلا',
-                                  state: ToastStates.success);
-                              setState(() {
-                                showloading = false;
-                              });
-                              await FirebaseAuth.instance.verifyPhoneNumber(
-                                phoneNumber: "+2${phoneController.text}",
-                                verificationCompleted:
-                                    (PhoneAuthCredential credential) {},
-                                verificationFailed: (FirebaseAuthException e) {
-                                  showToast(
-                                      text: 'يرجا المحاولة مره اخري',
-                                      state: ToastStates.success);
-                                  setState(() {
-                                    showloading = true;
-                                  });
-                                },
-                                codeSent:
-                                    (String verificationId, int? resendToken) {
-                                  var c = RegisterCubit.get(context);
-                                  c.id = verificationId;
-                                  c.name = nameController.text;
-                                  c.phone = phoneController.text;
-                                  c.age = dropdownvalue2;
-                                  c.city = dropdownvalue3;
-                                  c.blood = dropdownvalue;
-                                  c.disease = dropdownvalue4;
-                                  // widget.donor
-                                  //     ? navigateTo(context, const OtpScreen())
-                                  //     : navigateTo(
-                                  //         context, const OtpSecondScreen());
-                                },
-                                codeAutoRetrievalTimeout:
-                                    (String verificationId) {},
-                              );
-                            }
-                          } else {
-                            showToast(
-                                text: 'ادخل كل الحقول',
-                                state: ToastStates.error);
-                          }
+                          // if (nameController.text.isNotEmpty &&
+                          //     phoneController.text.isNotEmpty) {
+                          //   if (phoneController.text.length != 11) {
+                          //     showToast(
+                          //         text: 'رقم الهاتف غير صحيح',
+                          //         state: ToastStates.warning);
+                          //   } else {
+                          //     showToast(
+                          //         text: 'برجاء الانتظار قليلا',
+                          //         state: ToastStates.success);
+                          //     setState(() {
+                          //       showloading = false;
+                          //     });
+                          //     await FirebaseAuth.instance.verifyPhoneNumber(
+                          //       phoneNumber: "+2${phoneController.text}",
+                          //       verificationCompleted:
+                          //           (PhoneAuthCredential credential) {},
+                          //       verificationFailed: (FirebaseAuthException e) {
+                          //         showToast(
+                          //             text: 'يرجا المحاولة مره اخري',
+                          //             state: ToastStates.success);
+                          //         setState(() {
+                          //           showloading = true;
+                          //         });
+                          //       },
+                          //       codeSent:
+                          //           (String verificationId, int? resendToken) {
+                          //         var c = RegisterCubit.get(context);
+                          //         c.id = verificationId;
+                          //         c.name = nameController.text;
+                          //         c.phone = phoneController.text;
+                          //         c.age = dropdownvalue2;
+                          //         c.city = dropdownvalue3;
+                          //         c.blood = dropdownvalue;
+                          //         c.disease = dropdownvalue4;
+                          //         // widget.donor
+                          //         //     ? navigateTo(context, const OtpScreen())
+                          //         //     : navigateTo(
+                          //         //         context, const OtpSecondScreen());
+                          //       },
+                          //       codeAutoRetrievalTimeout:
+                          //           (String verificationId) {},
+                          //     );
+                          //   }
+                          // } else {
+                          //   showToast(
+                          //       text: 'ادخل كل الحقول',
+                          //       state: ToastStates.error);
+                          // }
                         },
                         child: const Text(
                           'حفظ البيانات',

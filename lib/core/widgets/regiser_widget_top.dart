@@ -16,12 +16,12 @@ class RegisterWidgetTop extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        const SizedBox(height: 70),
+        const SizedBox(height: 20),
         Text(
           title,
           style: Styles.textStyle27,
         ),
-        const SizedBox(height: 60),
+        const SizedBox(height: 40),
         Align(
           alignment: Alignment.topRight,
           child: Text(
@@ -29,7 +29,7 @@ class RegisterWidgetTop extends StatelessWidget {
             style: Styles.textStyle20,
           ),
         ),
-        const SizedBox(height: 40),
+        const SizedBox(height: 20),
       ],
     );
   }

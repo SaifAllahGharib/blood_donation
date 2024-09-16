@@ -1,12 +1,13 @@
 import 'package:blooddoman_clean/RegisterCubit/cubit.dart';
 import 'package:blooddoman_clean/bloc/MainBloc.dart';
-import 'package:blooddoman_clean/core/utils/app_router.dart';
-import 'package:blooddoman_clean/features/splash/presentation/views/splash_view.dart';
+import 'package:blooddoman_clean/features/home/presentation/views/home_view.dart';
 import 'package:blooddoman_clean/firebase_options.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
+
+import 'core/utils/app_router.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -50,7 +51,7 @@ class MyApp extends StatelessWidget {
       child: const MaterialApp(
         // routerConfig: AppRouter.router,
 
-        home: SplashView(),
+        home: HomeView(),
       ),
     );
   }

@@ -1,4 +1,4 @@
-import 'package:blooddoman_clean/features/login/presentaion/views/login_view.dart';
+import 'package:blooddoman_clean/features/signup/presentaion/views/signup_view.dart';
 import 'package:blooddoman_clean/features/splash/presentation/views/widgets/sliding_logo.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -51,7 +51,7 @@ class _SplashViewBodyState extends State<SplashViewBody>
     Future.delayed(
       const Duration(milliseconds: 2200),
       () {
-        GoRouter.of(context).pushReplacement(LoginView.id);
+        GoRouter.of(context).pushReplacement(SignupView.id);
       },
     );
   }
