@@ -1,7 +1,8 @@
-import 'package:blooddoman_clean/features/signup/presentaion/views/signup_view.dart';
 import 'package:blooddoman_clean/features/splash/presentation/views/widgets/sliding_logo.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+
+import '../../../../donor_search/presentation/views/donor_search_view.dart';
 
 class SplashViewBody extends StatefulWidget {
   const SplashViewBody({super.key});
@@ -51,7 +52,7 @@ class _SplashViewBodyState extends State<SplashViewBody>
     Future.delayed(
       const Duration(milliseconds: 2200),
       () {
-        GoRouter.of(context).pushReplacement(SignupView.id);
+        GoRouter.of(context).pushReplacement(DonorSearchView.id);
       },
     );
   }

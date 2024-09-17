@@ -1,5 +1,6 @@
 import 'package:blooddoman_clean/core/utils/styles.dart';
 import 'package:blooddoman_clean/core/widgets/custom_button.dart';
+import 'package:blooddoman_clean/core/widgets/custom_inkwell.dart';
 import 'package:blooddoman_clean/core/widgets/custom_text_form_field.dart';
 import 'package:blooddoman_clean/core/widgets/regiser_widget_top.dart';
 import 'package:blooddoman_clean/features/signup/presentaion/views/signup_view.dart';
@@ -15,11 +16,7 @@ class LoginViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
-      child: InkWell(
-        enableFeedback: false,
-        splashColor: Colors.transparent,
-        highlightColor: Colors.transparent,
-        onTap: () => FocusScope.of(context).unfocus(),
+      child: CustomInkwell(
         child: Padding(
           padding:
               const EdgeInsets.only(top: 80, left: 20, bottom: 20, right: 20),
@@ -54,7 +51,10 @@ class LoginViewBody extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 40),
-              const CustomButton(text: "تسجيل الدخول"),
+              CustomButton(
+                text: "تسجيل الدخول",
+                onPressed: () {},
+              ),
               const SizedBox(height: 40),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,

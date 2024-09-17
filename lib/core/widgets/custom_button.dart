@@ -4,10 +4,12 @@ import 'package:flutter/material.dart';
 
 class CustomButton extends StatelessWidget {
   final String text;
+  final void Function() onPressed;
 
   const CustomButton({
     super.key,
     required this.text,
+    required this.onPressed,
   });
 
   @override
@@ -17,7 +19,7 @@ class CustomButton extends StatelessWidget {
       child: SizedBox(
         width: MediaQuery.of(context).size.width * 0.6,
         child: MaterialButton(
-          onPressed: () {},
+          onPressed: onPressed,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(500),
           ),

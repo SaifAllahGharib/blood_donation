@@ -1,6 +1,7 @@
 import 'package:blooddoman_clean/constante.dart';
 import 'package:blooddoman_clean/core/widgets/custom_button.dart';
 import 'package:blooddoman_clean/core/widgets/custom_dropdown_menu.dart';
+import 'package:blooddoman_clean/core/widgets/custom_inkwell.dart';
 import 'package:blooddoman_clean/core/widgets/custom_text_form_field.dart';
 import 'package:blooddoman_clean/core/widgets/regiser_widget_top.dart';
 import 'package:flutter/material.dart';
@@ -20,11 +21,7 @@ class SignupViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
-      child: InkWell(
-        enableFeedback: false,
-        splashColor: Colors.transparent,
-        highlightColor: Colors.transparent,
-        onTap: () => FocusScope.of(context).unfocus(),
+      child: CustomInkwell(
         child: Padding(
           padding: const EdgeInsets.all(20),
           child: Column(
@@ -94,7 +91,10 @@ class SignupViewBody extends StatelessWidget {
                 isPassword: true,
               ),
               const SizedBox(height: 40),
-              const CustomButton(text: "انشاء حساب"),
+              CustomButton(
+                text: "انشاء حساب",
+                onPressed: () {},
+              ),
             ],
           ),
         ),

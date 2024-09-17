@@ -1,4 +1,4 @@
-import 'package:blooddoman_clean/core/utils/assets.dart';
+import 'package:blooddoman_clean/core/widgets/logo.dart';
 import 'package:flutter/material.dart';
 
 class SlidingLogo extends StatelessWidget {
@@ -15,7 +15,7 @@ class SlidingLogo extends StatelessWidget {
       animation: animation,
       builder: (context, child) => SlideTransition(
         position: animation,
-        child: Image.asset(Assets.logo),
+        child: const Logo(),
       ),
     );
   }
