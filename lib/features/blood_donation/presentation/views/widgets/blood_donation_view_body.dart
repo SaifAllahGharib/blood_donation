@@ -1,7 +1,7 @@
 import 'package:blooddoman_clean/constante.dart';
 import 'package:blooddoman_clean/core/widgets/custom_inkwell.dart';
+import 'package:blooddoman_clean/core/widgets/custom_row.dart';
 import 'package:blooddoman_clean/core/widgets/custom_text_form_field.dart';
-import 'package:blooddoman_clean/features/blood_donation/presentation/views/widgets/custom_row.dart';
 import 'package:flutter/material.dart';
 
 class BloodDonationViewBody extends StatelessWidget {

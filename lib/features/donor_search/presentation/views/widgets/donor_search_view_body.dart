@@ -1,10 +1,72 @@
+import 'package:blooddoman_clean/constante.dart';
+import 'package:blooddoman_clean/core/widgets/custom_image_profile.dart';
+import 'package:blooddoman_clean/core/widgets/custom_inkwell.dart';
+import 'package:blooddoman_clean/core/widgets/custom_row.dart';
+import 'package:blooddoman_clean/core/widgets/custom_text_form_field.dart';
+import 'package:blooddoman_clean/features/donor_profile/presentation/views/donor_profile_view.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class DonorSearchViewBody extends StatelessWidget {
-  const DonorSearchViewBody({super.key});
+  final TextEditingController searchController = TextEditingController();
+
+  DonorSearchViewBody({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return CustomInkwell(
+      child: Padding(
+        padding: const EdgeInsets.all(20),
+        child: Column(
+          children: [
+            CustomTextFormField(controller: searchController, textHint: "ابحث"),
+            const SizedBox(height: 10),
+            Expanded(
+              child: ListView.builder(
+                itemCount: 10,
+                itemBuilder: (context, index) {
+                  return InkWell(
+                    onTap: () => GoRouter.of(context).push(DonorProfileView.id),
+                    child: const Card(
+                      color: primaryColor,
+                      child: Padding(
+                        padding: EdgeInsets.all(20),
+                        child: Column(
+                          children: [
+                            CustomImageProfile(color: Colors.white),
+                            SizedBox(height: 10),
+                            Column(
+                              children: [
+                                CustomRow(
+                                  title: "الاسم",
+                                  disc: "سيف الله غريب",
+                                ),
+                                CustomRow(
+                                  title: "الرقم",
+                                  disc: "+201014890911",
+                                ),
+                                CustomRow(
+                                  title: "فصيله الدم",
+                                  disc: "A+",
+                                ),
+                                CustomRow(
+                                  title: "العنوان",
+                                  disc:
+                                      "القاهر جلوان سيبسيبsdfsdfsdfsdfsdfsdfsdfsdfسي",
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  );
+                },
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }

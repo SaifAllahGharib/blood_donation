@@ -1,4 +1,5 @@
 import 'package:blooddoman_clean/constante.dart';
+import 'package:blooddoman_clean/core/widgets/custom_back_button.dart';
 import 'package:blooddoman_clean/core/widgets/custom_button.dart';
 import 'package:blooddoman_clean/core/widgets/custom_dropdown_menu.dart';
 import 'package:blooddoman_clean/core/widgets/custom_inkwell.dart';
@@ -27,12 +28,8 @@ class SignupViewBody extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.end,
             children: [
-              IconButton(
+              CustomBackButton(
                 onPressed: () {},
-                icon: const Icon(
-                  Icons.arrow_forward_ios_outlined,
-                  color: primaryColor,
-                ),
               ),
               const RegisterWidgetTop(
                 title: "انشاء حساب",
